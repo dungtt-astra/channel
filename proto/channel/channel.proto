@@ -9,6 +9,5 @@ message Channel {
   string partA = 3;
   string partB = 4;
   string denom = 5;
-  string sequence = 6;
 }
 

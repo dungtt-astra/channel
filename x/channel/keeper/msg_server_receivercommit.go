@@ -90,7 +90,6 @@ func (k msgServer) Receivercommit(goCtx context.Context, msg *types.MsgReceiverc
 	if err != nil {
 		return nil, err
 	}
-	Timelocksender = Timelocksender + uint64(ctx.BlockHeight())
 
 	fwscommitment := types.Fwdcommit{
 		Index:            indexTransfer,
