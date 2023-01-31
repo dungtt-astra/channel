@@ -37,7 +37,7 @@ func (k msgServer) OpenChannel(goCtx context.Context, msg *types.MsgOpenChannel)
 		}
 	}
 
-	indexStr := fmt.Sprintf("%s:%s:%s", msg.MultisigAddr, msg.CoinA.Denom, msg.Sequence)
+	indexStr := fmt.Sprintf("%s:%s", msg.MultisigAddr, msg.CoinA.Denom)
 
 	channel := types.Channel{
 		Index:        indexStr,
@@ -45,7 +45,6 @@ func (k msgServer) OpenChannel(goCtx context.Context, msg *types.MsgOpenChannel)
 		PartA:        msg.PartA,
 		PartB:        msg.PartB,
 		Denom:        msg.CoinA.Denom,
-		Sequence:     msg.Sequence,
 	}
 	k.Keeper.SetChannel(ctx, channel)
 

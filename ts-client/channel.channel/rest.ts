@@ -15,7 +15,6 @@ export interface ChannelChannel {
   partA?: string;
   partB?: string;
   denom?: string;
-  sequence?: string;
 }
 
 export interface ChannelCommitment {
@@ -170,7 +169,7 @@ export interface ChannelQueryGetFwdcommitResponse {
  * QueryParamsResponse is response type for the Query/Params RPC method.
  */
 export interface ChannelQueryParamsResponse {
-  /** Params defines the parameters for the module. */
+  /** params holds all the parameters of this module. */
   params?: ChannelParams;
 }
 
@@ -252,12 +251,7 @@ corresponding request message has used PageRequest.
  }
 */
 export interface V1Beta1PageResponse {
-  /**
-   * next_key is the key to be passed to PageRequest.key to
-   * query the next page most efficiently. It will be empty if
-   * there are no more results.
-   * @format byte
-   */
+  /** @format byte */
   next_key?: string;
 
   /** @format uint64 */

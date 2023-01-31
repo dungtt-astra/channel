@@ -9,7 +9,6 @@ export interface Channel {
   partA: string;
   partB: string;
   denom: string;
-  sequence: string;
 }
 
 const baseChannel: object = {
@@ -18,7 +17,6 @@ const baseChannel: object = {
   partA: "",
   partB: "",
   denom: "",
-  sequence: "",
 };
 
 export const Channel = {
@@ -37,9 +35,6 @@ export const Channel = {
     }
     if (message.denom !== "") {
       writer.uint32(42).string(message.denom);
-    }
-    if (message.sequence !== "") {
-      writer.uint32(50).string(message.sequence);
     }
     return writer;
   },
@@ -65,9 +60,6 @@ export const Channel = {
           break;
         case 5:
           message.denom = reader.string();
-          break;
-        case 6:
-          message.sequence = reader.string();
           break;
         default:
           reader.skipType(tag & 7);
@@ -104,11 +96,6 @@ export const Channel = {
     } else {
       message.denom = "";
     }
-    if (object.sequence !== undefined && object.sequence !== null) {
-      message.sequence = String(object.sequence);
-    } else {
-      message.sequence = "";
-    }
     return message;
   },
 
@@ -120,7 +107,6 @@ export const Channel = {
     message.partA !== undefined && (obj.partA = message.partA);
     message.partB !== undefined && (obj.partB = message.partB);
     message.denom !== undefined && (obj.denom = message.denom);
-    message.sequence !== undefined && (obj.sequence = message.sequence);
     return obj;
   },
 
@@ -150,11 +136,6 @@ export const Channel = {
       message.denom = object.denom;
     } else {
       message.denom = "";
-    }
-    if (object.sequence !== undefined && object.sequence !== null) {
-      message.sequence = object.sequence;
-    } else {
-      message.sequence = "";
     }
     return message;
   },

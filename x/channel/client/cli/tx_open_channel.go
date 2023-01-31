@@ -16,14 +16,13 @@ var _ = strconv.Itoa(0)
 
 func CmdOpenChannel() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "open-channel [part-a] [part-b] [coin-a] [coin-b] [multisig-addr] [sequence]",
+		Use:   "open-channel [part-a] [part-b] [coin-a] [coin-b] [multisig-addr]",
 		Short: "Broadcast message open-channel",
 		Args:  cobra.ExactArgs(6),
 		RunE: func(cmd *cobra.Command, args []string) (err error) {
 			argPartA := args[0]
 			argPartB := args[1]
 			multisig_addr := args[4]
-			sequence := args[5]
 
 			//sequence, err := strconv.ParseUint(args[5], 10, 64)
 			//if err != nil {
@@ -70,7 +69,6 @@ func CmdOpenChannel() *cobra.Command {
 				&coinA,
 				&coinB,
 				multisig_addr,
-				sequence,
 			)
 			if err := msg.ValidateBasic(); err != nil {
 				return err

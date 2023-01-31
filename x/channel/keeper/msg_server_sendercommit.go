@@ -91,7 +91,6 @@ func (k msgServer) Sendercommit(goCtx context.Context, msg *types.MsgSendercommi
 	if err != nil {
 		return nil, err
 	}
-	Timelocksender = Timelocksender + uint64(ctx.BlockHeight())
 
 	Timelockreceiver, err := strconv.ParseUint(msg.Timelockreceiver, 10, 64)
 	if err != nil {

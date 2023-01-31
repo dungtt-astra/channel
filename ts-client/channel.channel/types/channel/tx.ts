@@ -57,7 +57,6 @@ export interface MsgOpenChannel {
   coinA: Coin | undefined;
   coinB: Coin | undefined;
   multisigAddr: string;
-  sequence: string;
 }
 
 export interface MsgOpenChannelResponse {
@@ -949,7 +948,6 @@ const baseMsgOpenChannel: object = {
   partA: "",
   partB: "",
   multisigAddr: "",
-  sequence: "",
 };
 
 export const MsgOpenChannel = {
@@ -971,9 +969,6 @@ export const MsgOpenChannel = {
     }
     if (message.multisigAddr !== "") {
       writer.uint32(50).string(message.multisigAddr);
-    }
-    if (message.sequence !== "") {
-      writer.uint32(58).string(message.sequence);
     }
     return writer;
   },
@@ -1002,9 +997,6 @@ export const MsgOpenChannel = {
           break;
         case 6:
           message.multisigAddr = reader.string();
-          break;
-        case 7:
-          message.sequence = reader.string();
           break;
         default:
           reader.skipType(tag & 7);
@@ -1046,11 +1038,6 @@ export const MsgOpenChannel = {
     } else {
       message.multisigAddr = "";
     }
-    if (object.sequence !== undefined && object.sequence !== null) {
-      message.sequence = String(object.sequence);
-    } else {
-      message.sequence = "";
-    }
     return message;
   },
 
@@ -1065,7 +1052,6 @@ export const MsgOpenChannel = {
       (obj.coinB = message.coinB ? Coin.toJSON(message.coinB) : undefined);
     message.multisigAddr !== undefined &&
       (obj.multisigAddr = message.multisigAddr);
-    message.sequence !== undefined && (obj.sequence = message.sequence);
     return obj;
   },
 
@@ -1100,11 +1086,6 @@ export const MsgOpenChannel = {
       message.multisigAddr = object.multisigAddr;
     } else {
       message.multisigAddr = "";
-    }
-    if (object.sequence !== undefined && object.sequence !== null) {
-      message.sequence = object.sequence;
-    } else {
-      message.sequence = "";
     }
     return message;
   },
