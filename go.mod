@@ -1,4 +1,4 @@
-module github.com/AstraProtocol/channel
+module github.com/dungtt-astra/channel
 
 go 1.18
 
