@@ -3,10 +3,10 @@ package channel_test
 import (
 	"testing"
 
-	keepertest "github.com/AstraProtocol/channel/testutil/keeper"
-	"github.com/AstraProtocol/channel/testutil/nullify"
-	"github.com/AstraProtocol/channel/x/channel"
-	"github.com/AstraProtocol/channel/x/channel/types"
+	keepertest "github.com/dungtt-astra/channel/testutil/keeper"
+	"github.com/dungtt-astra/channel/testutil/nullify"
+	"github.com/dungtt-astra/channel/x/channel"
+	"github.com/dungtt-astra/channel/x/channel/types"
 	"github.com/stretchr/testify/require"
 )
 

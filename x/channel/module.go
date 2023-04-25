@@ -5,22 +5,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
+	"github.com/spf13/cobra"
 
 	// this line is used by starport scaffolding # 1
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	"github.com/spf13/cobra"
-
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/AstraProtocol/channel/x/channel/client/cli"
-	"github.com/AstraProtocol/channel/x/channel/keeper"
-	"github.com/AstraProtocol/channel/x/channel/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/dungtt-astra/channel/x/channel/client/cli"
+	"github.com/dungtt-astra/channel/x/channel/keeper"
+	"github.com/dungtt-astra/channel/x/channel/types"
 )
 
 var (

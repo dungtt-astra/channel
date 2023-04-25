@@ -2,15 +2,15 @@ package cli
 
 import (
 	"fmt"
-	// "strings"
-
 	"github.com/spf13/cobra"
+
+	// "strings"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/AstraProtocol/channel/x/channel/types"
+	"github.com/dungtt-astra/channel/x/channel/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

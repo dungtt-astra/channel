@@ -4,11 +4,11 @@ import (
 	"strconv"
 	"testing"
 
-	keepertest "github.com/AstraProtocol/channel/testutil/keeper"
-	"github.com/AstraProtocol/channel/testutil/nullify"
-	"github.com/AstraProtocol/channel/x/channel/keeper"
-	"github.com/AstraProtocol/channel/x/channel/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	keepertest "github.com/dungtt-astra/channel/testutil/keeper"
+	"github.com/dungtt-astra/channel/testutil/nullify"
+	"github.com/dungtt-astra/channel/x/channel/keeper"
+	"github.com/dungtt-astra/channel/x/channel/types"
 	"github.com/stretchr/testify/require"
 )
 

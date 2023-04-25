@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/AstraProtocol/channel/x/channel/types"
+	"github.com/dungtt-astra/channel/x/channel/types"
 )
 
 type msgServer struct {

@@ -2,13 +2,12 @@ package cli
 
 import (
 	"fmt"
-	"time"
-
 	"github.com/spf13/cobra"
+	"time"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/AstraProtocol/channel/x/channel/types"
+	"github.com/dungtt-astra/channel/x/channel/types"
 )
 
 var (

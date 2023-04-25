@@ -2,11 +2,11 @@ package cli
 
 import (
 	"context"
+	"github.com/spf13/cobra"
 
-	"github.com/AstraProtocol/channel/x/channel/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/spf13/cobra"
+	"github.com/dungtt-astra/channel/x/channel/types"
 )
 
 func CmdListFwdcommit() *cobra.Command {
