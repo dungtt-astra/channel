@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
-
 	// this line is used by starport scaffolding # 1
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
