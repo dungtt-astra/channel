@@ -15,7 +15,7 @@ func (k msgServer) Sendercommit(goCtx context.Context, msg *types.MsgSendercommi
 	// TODO: Handling the message
 	val, found := k.Keeper.GetChannel(ctx, msg.Channelid)
 	if !found {
-		return nil, errors.New("ChannelID is not existing")
+		return nil, errors.New(fmt.Sprintf("ChannelID %v is not existing", msg.Channelid))
 	}
 
 	var toTimelock, toHashlock string
